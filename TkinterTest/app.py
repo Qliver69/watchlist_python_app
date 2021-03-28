@@ -1,6 +1,7 @@
 import tkinter as tk
 import os
-from selenium_script import main
+import subprocess
+import sys
 
 
 class App:
@@ -51,7 +52,7 @@ class App:
                                       font=22, activebackground=self.colorBG, height=2, width=50)
         self.btn_downloadAnime = tk.Button(self.frm_addAnime, text='Lunch download script with voiranime.com links',
                                            bg=self.colorBTN, font=22, activebackground=self.colorBG, height=2, width=50,
-                                           command=main)
+                                           command=self.open_selenium)
         self.btn_decrease1 = tk.Button(self.frm_season, text='-', bg=self.colorBG, font=('arial', 22),
                                        command=self.decrease1)
         self.btn_decrease2 = tk.Button(self.frm_episode, text='-', bg=self.colorBG, font=('arial', 22),
@@ -205,5 +206,8 @@ class App:
         else:
             self.anime_list[self.find_index()][3] = '0'
         print(self.anime_list[self.find_index()][3])
+
+    def open_selenium(self):
+        subprocess.Popen(args=['python', 'selenium2.py'], stdout=sys.stdout)
 
 # problem of the night : the checkbox isn't responding well to transform an anime in finished anime

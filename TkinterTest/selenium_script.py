@@ -20,7 +20,7 @@ def main():
         options.add_argument('--ignore-certificate-errors-spki-list')
         options.add_argument('--ignore-ssl-errors')
 
-        driver = webdriver.Chrome(executable_path='../chromedriver_win32/chromedriver.exe',
+        driver = webdriver.Chrome(executable_path='../driver/chromedriver.exe',
                                   chrome_options=options)
         driver.get(first_url)
 
