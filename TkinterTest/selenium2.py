@@ -10,7 +10,7 @@ from time import sleep
 print("Hi ! I'm a script which permits you to download easily from voiranime.com\n"
       "Sorry for those who aren't french but it's the first version of me ...\n"
       "Oh ! And I warn you : the Captcha check are very long .....\n"
-      "(One last things, it works only on Chrome)\n Good using ! ;)\n\n")
+      "(One last things, it works only on Chrome)\n Good use ! ;)\n\n")
 number_episode = int(input("How many episode's link do you want to get ? "))
 if number_episode > 0:
     first_url = input("Copy the URL corresponding to the first episode : ")
