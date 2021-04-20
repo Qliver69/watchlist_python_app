@@ -1,6 +1,6 @@
-import app
+import app_main
 
-app = app.App()
+app = app_main.App()
 
 # configuration of the window and the widget
 app.config_window()
